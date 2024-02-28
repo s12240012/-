@@ -1,0 +1,19 @@
+import math
+a=float(input("輸入a值:"))
+b=float(input("輸入b值:"))
+c=float(input("輸入c值:"))
+
+#判別式
+D = b **2-4*a*c
+
+#判斷根是否有解並計算根
+if D>0 :
+    root1=( -b + math.sqrt(D) ) / (2*a)
+    root2=( -b - math.sqrt(D) ) / (2*a)
+    print("方程的解為：" , root1,root2)
+   
+elif D==0:
+    root1=root2= -b/2*a
+    print("方程的解為：" ,root1)
+elif D<0 :
+    print("方程的解為：無實數解")
