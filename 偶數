@@ -1,0 +1,10 @@
+#因為要讓p知道要嘗試此程式有錯所以才要使用try
+try:
+    a=int(input("請輸入一數字:"))
+    if(a%2==0):
+        print("此數為偶數")
+    elif(a%2==1):
+        print("此數非偶數")
+        
+except ValueError:
+    print("請輸入數字")
