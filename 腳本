@@ -1,0 +1,16 @@
+#收集資料
+name=input("請輸入你的名字:")
+age=input("請輸入你的年齡:")
+height=input("請輸入你的身高(m):")
+mostlike_color=input("請輸入你最喜歡的顏色:")
+# 將資料存儲在字典中
+user_data={
+    "名字":name,
+    "年齡":age,
+    "身高":height,
+    "最愛的顏色":mostlike_color
+    }
+# 生成格式化的個人資料摘要
+summary=f"姓名:{user_data['名字']},年齡:{user_data['年齡']}歲,身高:{user_data['身高']}米,最喜歡的顏色是:{user_data['最愛的顏色']}"
+
+print(summary)
