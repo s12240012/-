@@ -1,0 +1,21 @@
+import random
+
+# 建立一副撲克牌
+suits = ['♥', '♠', '♦', '♣']
+ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+deck = [(rank, suit) for suit in suits for rank in ranks]
+
+# 洗牌
+random.shuffle(deck)
+
+# 發牌給四個人
+player1 = sorted(deck[:13])
+player2 = sorted(deck[13:26])
+player3 = sorted(deck[26:39])
+player4 = sorted(deck[39:])
+
+# 顯示結果
+print("玩家1的手牌：", player1)
+print("玩家2的手牌：", player2)
+print("玩家3的手牌：", player3)
+print("玩家4的手牌：", player4)
