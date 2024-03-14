@@ -1,0 +1,16 @@
+# 建立字典
+transform = {'a':'A', 'b': 'B', 'c': 'C', 'd': 'D', 'e': 'E',
+               'f': 'F', 'g': 'G', 'h': 'H', 'i': 'I', 'j': 'J',
+               'k': 'K', 'l': 'L', 'm': 'M', 'n': 'N', 'o': 'O',
+               'p': 'P', 'q': 'Q', 'r': 'R', 's': 'S', 't': 'T',
+               'u': 'U', 'v': 'V', 'w': 'W', 'x': 'X', 'y': 'Y',
+               'z': 'Z'}
+
+
+input_string=input("輸入英文字母:")
+input_string=list(input_string)
+for i in range(len(input_string)):
+    input_string[i]=transform[input_string[i]]
+    
+output_string="".join(input_string)
+print(":",output_string)
