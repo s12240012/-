@@ -1,0 +1,18 @@
+import random
+
+n=int(input("請輸入一整數值n:"))
+a=int(input("請輸入一整數值a:"))
+b=int(input("請輸入一整數值b:"))
+
+random_choose_list=[]
+
+while len(random_choose_list)<n:
+    x=random.randint(a, b)
+    random_choose_list.append(x)
+    
+random_choose_list=set(random_choose_list)
+random_choose_list=list(random_choose_list)
+random_choose_list.sort()
+random_choose_list.reverse()
+
+print(random_choose_list)   
