@@ -1,0 +1,7 @@
+L=(1,2,3)
+num_tuple=(L,)
+num_list=list(num_tuple[0])
+num_list.extend([4,5])
+updated_num_tuple = tuple(num_list)
+print("originalnumber:",num_tuple[0])
+print("updatednumber:",updated_num_tuple)
