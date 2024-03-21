@@ -1,0 +1,17 @@
+import random
+num=random.randint(1, 100)
+while True:
+    guess=input('猜一個1-100的數字:')
+    #檢查輸入的數字為正整數
+    if not guess.isdigit():
+        print("請輸入一個正整數")
+        continue
+    guess=int(guess)
+    
+    if guess < num:
+        print("猜太低了!")
+    elif guess > num:
+        print("猜太大囉!")
+    else:
+        print("猜對了!")
+        break
