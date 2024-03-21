@@ -1,0 +1,9 @@
+I=int(3)
+P="Hello"
+L=[1,2,3]
+F=float(3.14)
+T=(I,P,L,F)
+second_element=T[1]
+last_element=T[3]
+print('second_element:',second_element)
+print('last_element:',last_element)
