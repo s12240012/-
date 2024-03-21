@@ -1,0 +1,19 @@
+import random
+
+i=int(input("請輸入你要選擇的數量"))
+questions_answers = {
+    "你是誰": "我是貞德",
+    "我幾歲?": "我喜歡打籃球",
+    "你喜歡甚麼課'?": "我喜歡你",
+    "我叫甚麼名字?":"莊伯峰"}
+num_select = i
+
+if num_select > len(questions_answers):
+    num_select = len(questions_answers)
+
+selected_questions = random.sample(list(questions_answers.items()), num_select)
+ 
+print("随机选择的问题和答案：")
+for question, answer in selected_questions:
+    print(f"Questions: {question}")
+    print(f"Answer: {answer}")
