@@ -1,0 +1,41 @@
+def check_lottery(ticket_number, winning_numbers):
+    prize = None
+    for number in winning_numbers:
+        if ticket_number == number:
+            prize = "特別獎"
+            break
+        elif ticket_number[-3:] == number[-3:]:
+            prize = "頭獎"
+            break
+        elif ticket_number[-4:] == number[-4:]:
+            prize = "二獎"
+            break
+        elif ticket_number[-5:] == number[-5:]:
+            prize = "三獎"
+            break
+        elif ticket_number[-6:] == number[-6:]:
+            prize = "四獎"
+            break
+        elif ticket_number[-7:] == number[-7:]:
+            prize = "五獎"
+            break
+        elif ticket_number[-8:] == number[-8:]:
+            prize = "六獎"
+            break
+    return prize
+
+def main():
+    # 假設這是你的中獎號碼清單
+    winning_numbers = ["63603594", "73155944", "94985899", "57283420", "62825278"]
+
+    ticket_number = input("請輸入你的發票號碼：")
+
+    prize = check_lottery(ticket_number, winning_numbers)
+
+    if prize:
+        print("恭喜你中了{}！".format(prize))
+    else:
+        print("很抱歉，你沒有中獎。")
+
+if __name__ == "__main__":
+    main()
