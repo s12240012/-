@@ -1,0 +1,22 @@
+import math
+import random
+
+# 設定均勻抽樣之範圍以及抽樣數量
+a=0
+b=2*math.pi
+num_sample = 100000
+def f(x):
+    return math.exp(x)*math.sin(x)
+
+# 抽取樣本
+integral = 0
+for i in range(num_sample):
+    x_sample = random.uniform(a, b)
+    integral += f(x_sample)
+
+# 計算面積
+
+integeral = (b-a)*(integral/num_sample)
+
+# 顯示結果
+print("使用蒙地卡羅方法估算的積分值為:",integeral)
